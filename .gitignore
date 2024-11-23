@@ -13,7 +13,8 @@ data/
 # Models
 models/
 
+
 # Logs
-notebooks\ cache_dir/
-notebooks\ outputs/
-notebooks\ runs/
+notebooks/cache_dir/
+notebooks/outputs/
+notebooks/runs/
