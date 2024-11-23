@@ -8,7 +8,12 @@ __pycache__/
 .vscode/
 
 # ebay Data 
-2023\ eBay\ ML\ Challenge\ Data/
+data/
 
 # Models
 models/
+
+# Logs
+notebooks\ cache_dir/
+notebooks\ outputs/
+notebooks\ runs/
