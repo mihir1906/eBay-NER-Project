@@ -30,8 +30,8 @@ This project leverages state-of-the-art transformer models – including BERT, R
    ```bash
     pip install -r requirements.txt
 
-##Usage
-###Running the NER Model
+## Usage
+### Running the NER Model
 The main inference script is located in test_ner.py. This script loads the best model and performs NER on an input tagline.
 In order to use the best model unzip the model into and folder and update the path in the test_ner.py. 
 
@@ -41,21 +41,37 @@ In order to use the best model unzip the model into and folder and update the pa
 
 After executing you'll be promted to enter a tagline for NER.
 
-Example:
-
-Enter a tagline to perform NER on:
-"Puma Laufschuhe Größe 42"
-100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 1878.33it/s]
-Running Prediction: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.80it/s]
-Sentence: "Puma Laufschuhe Größe 42"
-Predictions: [{'Puma': 'B-No Tag'}, {'Laufschuhe': 'B-Produktart'}, {'Größe': 'B-No Tag'}, {'42"': 'B-EU-Schuhgröße'}]
+  ### Example:
+    
+    Enter a tagline to perform NER on:
+    
+    "Puma Laufschuhe Größe 42"
+    
+    100%|██████████████| 1/1 [00:00<00:00, 1878.33it/s]
+    
+    Running Prediction: 100%|████████████████| 1/1 [00:00<00:00,  3.80it/s]
+    
+    Sentence: "Puma Laufschuhe Größe 42"
+    
+    Predictions: [{'Puma': 'B-No Tag'}, {'Laufschuhe': 'B-Produktart'}, {'Größe': 'B-No Tag'}, {'42"': 'B-EU-Schuhgröße'}]
 
 
 ## Comparative Analysis
 
 Below is a combined comparative analysis of the models:
 
-![Comparative Analysis](outputs/plots/metric_plots/f1_score_comparison.png)
+### Final Performance Metrics
+
+| Model                | Eval Loss | F1 Score | Precision | Recall |
+|----------------------|-----------|----------|-----------|--------|
+| **BERT**             | 0.630     | 0.907    | 0.903     | 0.911  |
+| **GBERT**            | 0.471     | 0.891    | 0.888     | 0.894  |
+| **XLM-RoBERTa Base** | 0.434     | 0.918    | 0.914     | 0.922  |
+| **XLM-RoBERTa Large**| 0.483     | 0.922    | 0.921     | 0.924  |
+
+
+
+![Comparative Analysis](plots/metric_plots/f1_score_comparison.png)
 
 
   
